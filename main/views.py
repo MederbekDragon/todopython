@@ -8,3 +8,6 @@ def test(request):
 
 def second(request):
     return HttpResponse("Test 2 page")
+
+def third(request):
+    return HttpResponse("This is third test page")
