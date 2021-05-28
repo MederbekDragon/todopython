@@ -13,3 +13,10 @@ def second(request):
 
 def third(request):
     return HttpResponse("This is third test page")
+
+def add_todo(request):
+    form = request.POST
+    text = form("todo_text")
+    todo = ToDo(text=text)
+    todo.save()
+    return HttpResponse("Form come")
